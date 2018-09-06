@@ -6,6 +6,14 @@ An easy way to capture and preview files in vue.
 Import the component and style it as you wish!
 
 ```
+npm i --save @hazin/vue-pic-video
+```
+
+```
+yarn add @hazin/vue-pic-video
+```
+
+```
 import vuePicVideo from '@hazin/vue-pic-video'
 ```
 
@@ -50,6 +58,8 @@ export default {
 </script>
 
 ```
+
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
