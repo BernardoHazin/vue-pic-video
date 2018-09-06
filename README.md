@@ -1,21 +1,59 @@
 # vue-pic-video
 
-## Project setup
+An easy way to capture and preview files in vue.
+
+## Getting Started
+Import the component and style it as you wish!
+
 ```
-yarn install
+import vuePicVideo from '@hazin/vue-pic-video'
+
 ```
 
-### Compiles and hot-reloads for development
+### Example
+
 ```
-yarn run serve
+<template>
+  <div class="hello">    
+    <vue-pic-video :accept="'image/*, video/*'" @preview="previewImage" @value="captureFile">
+      <button>Upload file</button>
+    </vue-pic-video>
+  </div>
+</template>
 ```
 
-### Compiles and minifies for production
 ```
-yarn run build
-```
+<script>
+import vuePicVideo from '@hazin/vue-pic-video'
 
-### Lints and fixes files
+export default {
+  name: 'app',
+  data () {
+    return {
+      previewImage: ''
+    }
+  },
+  components: {
+    vuePicVideo
+  },
+  methods: {
+    previewImage: preview => this.previewImage = preview,
+    captureFile: value => console.log(value)
+  }
+}
+</script>
+
 ```
-yarn run lint
-```
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+* **Bernardo hazin** - [Hazin](https://github.com/BernardoHazin)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
