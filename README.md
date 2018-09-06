@@ -49,9 +49,9 @@ export default {
     vuePicVideo
   },
   methods: {
-    previewImage (preview) { this.image = preview },
-    previewVideo (preview) { this.video = preview },
-    captureFile: value => { console.log(value) }
+    previewImage (preview) { this.image = preview }, // Binds the image to show in <image> tag
+    previewVideo (preview) { this.video = preview }, // Binds the video to show in <video> tag
+    captureFile: value => { console.log(value) } // Log the file Object
   }
 }
 </script>
