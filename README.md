@@ -19,7 +19,7 @@ import vuePicVideo from '@hazin/vue-pic-video'
 
 ### Example
 
-```
+```html
 <template>
   <div class="hello">
     <vue-pic-video :accept="'image/*'" @preview="previewImage" @value="captureFile">
@@ -32,10 +32,9 @@ import vuePicVideo from '@hazin/vue-pic-video'
     <video :src="video" width="200px" controls></video>
   </div>
 </template>
-<script>
 ```
 
-```
+```html
 <script>
 import vuePicVideo from '@hazin/vue-pic-video'
 
