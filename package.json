@@ -12,6 +12,12 @@
   "dependencies": {
     "vue": "^2.5.17"
   },
+  "keywords": [
+    "vue",
+    "picture",
+    "image",
+    "video"
+  ],
   "files": [
     "dist/*",
     "src/*",

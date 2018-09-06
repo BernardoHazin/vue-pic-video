@@ -7,19 +7,24 @@ Import the component and style it as you wish!
 
 ```
 import vuePicVideo from '@hazin/vue-pic-video'
-
 ```
 
 ### Example
 
 ```
 <template>
-  <div class="hello">    
-    <vue-pic-video :accept="'image/*, video/*'" @preview="previewImage" @value="captureFile">
-      <button>Upload file</button>
+  <div class="hello">
+    <vue-pic-video :accept="'image/*'" @preview="previewImage" @value="captureFile">
+      <button>Upload image</button>
     </vue-pic-video>
+    <img :src="image" width="200px" height="200px" alt="">
+    <vue-pic-video :accept="'video/*'" @preview="previewVideo" @value="captureFile">
+      <button>Upload video</button>
+    </vue-pic-video>
+    <video :src="video" width="200px" controls></video>
   </div>
 </template>
+<script>
 ```
 
 ```
@@ -27,18 +32,19 @@ import vuePicVideo from '@hazin/vue-pic-video'
 import vuePicVideo from '@hazin/vue-pic-video'
 
 export default {
-  name: 'app',
   data () {
     return {
-      previewImage: ''
+      image: '',
+      video: ''
     }
   },
   components: {
     vuePicVideo
   },
   methods: {
-    previewImage: preview => this.previewImage = preview,
-    captureFile: value => console.log(value)
+    previewImage (preview) { this.image = preview },
+    previewVideo (preview) { this.video = preview },
+    captureFile: value => { console.log(value) }
   }
 }
 </script>
